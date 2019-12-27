@@ -1,26 +1,19 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Kanban from './Components/Kanban';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const logoStyle = {
+  display: 'block',
+  margin: '0 auto',
+  width: '200px'
 }
+
+const App = () => (
+  <div className="App">
+    <img src={logo} className="App-logo" style={logoStyle} alt="logo" />
+    <Kanban />
+  </div>
+);
 
 export default App;
