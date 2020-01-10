@@ -1,19 +1,22 @@
 import React from 'react';
 import logo from './logo.svg';
-import './App.css';
-import Kanban from './Components/Kanban';
-
-const logoStyle = {
-  display: 'block',
-  margin: '0 auto',
-  width: '200px'
-}
+import KanbanContextProvider from './Contexts/KanbanContext';
+import KanbanBoard from './Components/KanbanBoard';
+import KanbanCreateBoard from './Components/KanbanCreateBoard';
 
 const App = () => (
-  <div className="App">
-    <img src={logo} className="App-logo" style={logoStyle} alt="logo" />
-    <Kanban />
-  </div>
-);
+  <KanbanContextProvider>
+    <div className="container">
+      <img src={logo} alt="React logo" style={{ width: '200px', display: 'block', margin: '0 auto' }} />
+    </div>
+
+    <div className="container">
+      <div className="columns">
+        <KanbanBoard />
+        <KanbanCreateBoard />
+      </div>
+    </div>
+  </KanbanContextProvider>
+)
 
 export default App;

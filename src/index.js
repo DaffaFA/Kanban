@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import 'bulma/css/bulma.min.css';
-import 'ionicons/dist/css/ionicons.min.css';
 import App from './App';
+import 'ionicons/dist/css/ionicons.min.css';
+import 'bulma/css/bulma.min.css';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(<App />, document.getElementById('root'));
